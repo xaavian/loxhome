@@ -1,0 +1,10 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "LoxHome",
+                "description": "Add the LoxHome dashboard to your Home Assistant sidebar."
+            }
+        }
+    }
+}

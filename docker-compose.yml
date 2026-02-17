@@ -1,0 +1,10 @@
+services:
+  loxhome:
+    container_name: loxhome
+    image: ghcr.io/xaavian/loxhome
+    network_mode: bridge
+    ports:
+      - 5050:5050
+    environment:
+      - TZ=Europe/Berlin
+    restart: always

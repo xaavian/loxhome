@@ -1,0 +1,214 @@
+/* ========================================
+   LoxHome — Design System
+   Matching Loxone 2026 UI (v16.2)
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS Custom Properties ── */
+:root {
+	/* Background — pure black like Loxone */
+	--bg-primary: #000000;
+	--bg-secondary: #0a0a10;
+	--bg-surface: #111118;
+	--bg-surface-hover: #1a1a24;
+	--bg-surface-active: #222230;
+	--bg-overlay: rgba(0, 0, 0, 0.88);
+
+	/* Loxone green accent */
+	--accent: #69b34c;
+	--accent-hover: #7cc45f;
+	--accent-glow: rgba(105, 179, 76, 0.2);
+	--accent-subtle: rgba(105, 179, 76, 0.08);
+
+	/* State colors */
+	--color-on: #69b34c;
+	--color-off: #444455;
+	--color-warn: #f5c542;
+	--color-error: #ef5350;
+	--color-info: #42a5f5;
+
+	/* Category colors — matching Loxone exactly */
+	--cat-lighting: #e8c840;
+	--cat-climate: #4aa8d8;
+	--cat-shading: #8d6e63;
+	--cat-security: #e85050;
+	--cat-media: #e84898;
+	--cat-switches: #69b34c;
+	--cat-sensors: #26c6da;
+	--cat-ok: #69b34c;
+
+	/* Text */
+	--text-primary: #e8e8f0;
+	--text-secondary: #888898;
+	--text-muted: #555566;
+	--text-on-accent: #ffffff;
+
+	/* Borders — very subtle */
+	--border-subtle: rgba(255, 255, 255, 0.04);
+	--border-tile: rgba(255, 255, 255, 0.06);
+	--border-focus: rgba(105, 179, 76, 0.4);
+
+	/* Spacing */
+	--space-2xs: 2px;
+	--space-xs: 4px;
+	--space-sm: 8px;
+	--space-md: 12px;
+	--space-lg: 16px;
+	--space-xl: 24px;
+	--space-2xl: 32px;
+
+	/* Radii — Loxone uses soft rounded tiles */
+	--radius-sm: 8px;
+	--radius-md: 14px;
+	--radius-lg: 18px;
+	--radius-xl: 24px;
+	--radius-full: 9999px;
+
+	/* Shadows — very subtle, almost none */
+	--shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.4);
+	--shadow-md: 0 2px 8px rgba(0, 0, 0, 0.5);
+	--shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.6);
+
+	/* Typography */
+	--font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-2xs: 0.6rem;
+	--font-xs: 0.7rem;
+	--font-sm: 0.8rem;
+	--font-md: 0.9rem;
+	--font-lg: 1.05rem;
+	--font-xl: 1.3rem;
+	--font-2xl: 1.6rem;
+
+	/* Transitions */
+	--transition-fast: 120ms ease;
+	--transition-normal: 200ms ease;
+	--transition-slow: 350ms ease;
+
+	/* Layout */
+	--topbar-height: 48px;
+	--bottombar-height: 60px;
+	--tile-gap: 8px;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--font-family);
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	line-height: 1.4;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+button {
+	font-family: var(--font-family);
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: var(--text-primary);
+}
+
+input,
+select,
+textarea {
+	font-family: var(--font-family);
+	background: var(--bg-surface);
+	color: var(--text-primary);
+	border: 1px solid var(--border-tile);
+	border-radius: var(--radius-sm);
+	padding: var(--space-sm) var(--space-md);
+	outline: none;
+	transition: border-color var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: var(--border-focus);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--text-muted);
+	border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-secondary);
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.96);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animate-fade-in {
+	animation: fadeIn var(--transition-normal);
+}
+
+.animate-slide-up {
+	animation: slideUp var(--transition-slow);
+}
+
+.animate-scale-in {
+	animation: scaleIn var(--transition-normal);
+}

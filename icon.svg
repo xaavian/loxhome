@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="80" fill="#1a1a2e"/>
+  <rect x="16" y="16" width="480" height="480" rx="68" fill="#16213e" stroke="#69b34c" stroke-width="3"/>
+  <!-- House outline -->
+  <path d="M256 120 L380 210 L380 390 L132 390 L132 210 Z" stroke="#69b34c" stroke-width="8" stroke-linejoin="round" fill="none"/>
+  <!-- Roof accent -->
+  <path d="M256 120 L380 210 L132 210 Z" stroke="#69b34c" stroke-width="8" stroke-linejoin="round" fill="rgba(105,179,76,0.1)"/>
+  <!-- Dashboard grid -->
+  <rect x="172" y="245" width="72" height="55" rx="8" fill="rgba(105,179,76,0.25)" stroke="#69b34c" stroke-width="3"/>
+  <rect x="268" y="245" width="72" height="55" rx="8" fill="rgba(105,179,76,0.25)" stroke="#69b34c" stroke-width="3"/>
+  <rect x="172" y="320" width="72" height="40" rx="8" fill="rgba(105,179,76,0.15)" stroke="#69b34c" stroke-width="3"/>
+  <rect x="268" y="320" width="72" height="40" rx="8" fill="rgba(105,179,76,0.15)" stroke="#69b34c" stroke-width="3"/>
+  <!-- Small dot accents in tiles -->
+  <circle cx="190" cy="265" r="5" fill="#69b34c" opacity="0.7"/>
+  <circle cx="286" cy="265" r="5" fill="#E8C840" opacity="0.7"/>
+  <circle cx="190" cy="338" r="5" fill="#4AA8D8" opacity="0.7"/>
+  <circle cx="286" cy="338" r="5" fill="#AB47BC" opacity="0.7"/>
+</svg>

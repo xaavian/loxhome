@@ -1,0 +1,12 @@
+{
+    "domain": "loxhome",
+    "name": "LoxHome",
+    "version": "0.1.0",
+    "documentation": "https://github.com/xaavian/loxhome",
+    "issue_tracker": "https://github.com/xaavian/loxhome/issues",
+    "codeowners": ["@xaavian"],
+    "requirements": [],
+    "dependencies": ["frontend", "http"],
+    "config_flow": true,
+    "integration_type": "service"
+}
